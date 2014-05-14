@@ -35,6 +35,24 @@ Return sentence.
    */   
 # 2. Initial Solution
 
+def total (num_arr)
+  sum = 0
+  num_arr.each do |i|
+    sum += i
+  end
+  return sum    
+end
+
+
+def sentence_maker (word_arr)
+  sentence = ''
+  word_arr.each do |i|
+    sentence += i + ' '
+  end
+  sentence.last = '.'
+  return sentence    
+end
+
 
 
 
