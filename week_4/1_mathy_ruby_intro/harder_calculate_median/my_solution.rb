@@ -38,16 +38,14 @@ return (array[array length / 2] + array[array length / 2 + 1])/2
 =end
 
 # 2. Initial Solution
-
+=begin
 def median (arr)
   arr.sort!
   arr_mid = arr.length / 2
   if arr.length % 2 == 1
-    puts "odd\n"
     return arr[arr_mid]
   else
     if arr[arr_mid].is_a? String
-      puts 'even string\n'
       return arr[arr_mid-1]
     else
       puts 'even number'
@@ -56,11 +54,33 @@ def median (arr)
   end
  end
 
-
+=end
 
 
 # 3. Refactored Solution
 
-
+def median (arr)
+  arr.sort!
+  arr_mid = arr.length / 2
+  
+  # return middle value if odd length
+  return arr[arr_mid] if arr.length % 2 == 1 
+  
+  #round down for middle index if an array of strings
+  return arr[arr_mid-1] if arr[arr_mid].is_a? String 
+  
+  # Average middle 2 numbers if even-length array of numbers
+  return (arr[arr_mid] + arr[arr_mid-1]).fdiv(2) 
+  
+end
 
 # 4. Reflection 
+=begin
+I'm not sure that I made my refactor clearer, though certainly shorter.  I added comments to clarify so the refactor is probably longer if you include those.
+
+I had a major stumble on the array index count.  I was get a false positive on one of the odd length arrays because the number after the actual median was the same.  That made it harder to understand, but a better lesson.
+
+I had no problem with figuring the string part out.  Got it on the first try.  I tend to stumble on the wrong stuff.
+=end
+
+
