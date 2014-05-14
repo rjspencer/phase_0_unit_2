@@ -34,8 +34,8 @@ Return sentence.
         
    */   
 # 2. Initial Solution
-
-def total (num_arr)
+/* Accepts an array of numbers, returns their sum */
+def total (num_arr)  /* Success */
   sum = 0
   num_arr.each do |i|
     sum += i
@@ -43,13 +43,15 @@ def total (num_arr)
   return sum    
 end
 
-
-def sentence_maker (word_arr)
+/* Accepts an array of words, capitalizes first letter, adds spaces, period at the end, and returns completed sentence  */
+def sentence_maker (word_arr)  /* Success */
   sentence = ''
   word_arr.each do |i|
-    sentence += i + ' '
+    sentence << i + ' '
   end
-  sentence.last = '.'
+  sentence.chop!
+  sentence << '.'
+  sentence.capitalize!
   return sentence    
 end
 
