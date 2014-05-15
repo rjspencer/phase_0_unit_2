@@ -14,7 +14,7 @@
 =begin
 Create separate_comma method that accepts 1 integer
 Convert integer to string
-Split string to array
+Split string to array (or loop and chop)
 Reverse array
 Set comma_num to ''
 Loop through array
@@ -27,10 +27,9 @@ return comma_num
 # 2. Initial Solution
 
 def separate_comma (num)
-	num.to_s.reverse
-	puts num
-
-
+	num_str  = num.to_s.reverse.split('')
+	puts num_str
+	
 end
 
 separate_comma(1000)
