@@ -48,6 +48,23 @@ end
 
 # 3. Refactored Solution
 
-
+def separate_comma (num)
+	num_array  = num.to_s.reverse.split('') 
+	comma = ''
+	num_array.each_with_index do |x, count|
+		if count % 3 === 0 && count > 0
+			comma.insert(0, ',')
+		end
+		comma.insert(0, x)
+	end
+	return comma
+end
 
 # 4. Reflection 
+=begin
+I struggled with the .each format.  In my readings, this is a popular tool for Ruby programmers.  Since I want to be one I should act like one, right?
+
+I initially wanted to do a C/PHP 
+	for(x=0; x<array.length; x++)
+
+=end
