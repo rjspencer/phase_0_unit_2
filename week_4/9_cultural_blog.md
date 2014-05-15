@@ -24,6 +24,17 @@ Once you've opened your file, write a response to each exercise using the HTML y
 5. If you could go back, what would you do differently, if anything?
 6. What did you learn from this experience?
 
+The greatest lesson I learned about people was told to me by one of the worst people I every let into my life.  She told me that people usually don't let us down, our expectations of them do.  
+
+We often want to see the best in people and create fantastic versions of them in our minds.  But, they are just human.  We all have flaws, we are all scared sometimes, and we all make mistakes.  Only when we accept our flaws and those of our friends can we build real relationships.
+
+When I find myself in a conflict I find it helpful to take a moment to see where the other person is coming from.  Maybe they are trying to live up to my expectations.  Maybe they know they are wrong but don't want to lose face in front of others.  Maybe I am wrong, or at least from their point of view I am.  
+
+That person I mentioned earlier?  She was an amazing liar, and I should hate her, but I don't.  Which brings me to my next point, you can learn something from everyone if you open up to the opportunity.  
+
+
+
+
 ## Release 2: Make it Live!
 Link to your blog on the index of your site and commit and push your changes to GitHub. 
 
