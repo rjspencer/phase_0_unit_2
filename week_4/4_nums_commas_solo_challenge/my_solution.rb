@@ -27,14 +27,24 @@ return comma_num
 # 2. Initial Solution
 
 def separate_comma (num)
-	num_str  = num.to_s.reverse.split('')
-	puts num_str
-	
+	puts "Length: #{num.to_s.length}"
+
+	num_array  = num.to_s.reverse.split('') # each_byte instead of split?
+	puts num_array
+	comma = ''
+	count = 0
+	num_array.each do |x|
+		if count % 3 === 0 && count > 0
+			comma.insert(0, ',')
+		end
+		count += 1
+		comma.insert(0, x)
+	end
+	puts "Comma: #{comma}"
+	return comma
 end
 
-separate_comma(1000)
 
-puts 1000.to_s.reverse
 
 # 3. Refactored Solution
 
