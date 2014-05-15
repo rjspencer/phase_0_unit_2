@@ -8,6 +8,16 @@
 - Use if/else statements, string methods, while/until loops, Enumerable#each methods
 - Use strings, integers, arrays, and/or hashes
 
+Create separate_comma method that accepts 1 integer
+Convert integer to string
+Split string to array
+Reverse array
+Set comma_num to ''
+Loop through array
+	Prepend each value to comma_num
+	if (array index + 1) % 3 is 0 then prepend comma to comma_num
+return comma_num
+
 ## Summary
 Write a method `separate_comma` which takes an integer as its input and returns a comma-separated integer as a string.  Like this:
 
