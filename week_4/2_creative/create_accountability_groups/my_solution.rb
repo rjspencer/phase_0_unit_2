@@ -5,9 +5,16 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
+# Input: students array
+# Output: students hash with group arrays
 # Steps:
+=begin
+Create tests
+d cc
+s
+
+
+=end
 
 
 # 3. Initial Solution
