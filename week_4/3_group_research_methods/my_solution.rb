@@ -7,6 +7,7 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
   # Your code here!
+      
 end
 
 def my_hash_finding_method(source, thing_to_find)
@@ -20,18 +21,37 @@ end
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+  source.each_with_index do |value, i|
+    if value.kind_of?(Integer) 
+      source[i] += thing_to_modify
+    end  
+  end
+  source
 end
 
 def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+  source.each_pair do |(key,value)|
+    if value.kind_of?(Integer) 
+      source[key] += thing_to_modify
+    end  
+  end
+  source
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
 #
+=begin
+my_array_modification_method(Array, Integer)
+Loop through each value in the array, checking each for a valid integer
+If an integer, increase it by the integer amount passed to the method
+Return the modified array
 #
-
+my_hash_modification_method(Array, Integer)
+Loop through each key:value pair in the hash, checking each value for a valid integer
+If an integer, use the key to increase it by the integer amount passed to the method
+Return the modified hash
+#
+=end
 
 # Person 3
 def my_array_sorting_method(source)

@@ -1,6 +1,10 @@
 [Week 4 Home](../)
 
 #U2.W4: Group Challenge: Research Methods
+#1. James Miller	jamesmiller78@gmail.com
+#2. Ryan Spencer	rjspencer82@gmail.com
+#3. Ismail Kalimi	ismailkalimi@gmail.com
+#4. Steve Loar	sjl7909@gmail.com
 
 ## Learning Objectives
 - Find and use built-in Ruby methods to solve challenges
