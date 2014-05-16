@@ -46,11 +46,12 @@ As a user, I want to
 - Input an important date into the template
 - Input my thesis statement into the template
 - Output my finished template onto the screen
-
  
 ## Release 1: Write [Driver Test Code](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/driver_code.md) 
   - First, write your generic template (store in a variable)
   - Then identify the three topics and write out your ideal paragraph using your generic template. Store these in variables. 
+
+
   
 ## Release 2: [Pseudocode](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/pseudocode.md)
 ## Release 3: [Initial Solution](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/initial_solution.md)
