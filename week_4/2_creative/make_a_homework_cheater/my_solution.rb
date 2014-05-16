@@ -5,15 +5,22 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
+# Input: title, subject, date, thesis, pronoun
+# Output: String - Length 100+ chars
 # Steps:
+=begin
+create essay_writer method
+return a few paragraphs with passed variables in it
 
+=end
 
 # 3. Initial Solution
 
+def essay_writer(title, subject, date, thesis, pronoun)
 
+	return "#{title} by Ryan J Spencer.\nI have written about a lot of different subjects in my day, but few could be dearer to my heart than #{subject}.  I feel that not enough people know about #{pronoun}, and I don't think I should keep such an awesome secret any longer.  \nI want you to think back to the year #{date} and imagine what it was like to be #{subject}.  #{thesis}.  \n#{pronoun} changed our world and I think we are all better for it"
 
+end
 
 # 4. Refactored Solution
 
@@ -26,8 +33,40 @@
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
+# Test Data
+
+title = "The First Shogun"
+subject = "Tokugawa Ieyasu"
+date = 1603
+thesis = "His most important contribution to history is that he founded the Tokugawa period, a peaceful time that lasted over 200 years."
+pronoun = "male"
+
+test_data = essay_writer(title, subject, date, thesis, pronoun) 
+puts test_data
+=begin
+describe "essay_writer" do
+   	it "should return a non-empty string" do
+      test_data.kind_of?(String) || test_data.length >= 1
+  	end
+  	it "should be at least 100 characters" do
+  		test_data.length >= 100
+  	end
+  	it "should include the title" do
+  		test_data.include? title
+  	end
+  	it "should include the subject" do
+  		test_data.include? subject
+  	end
+  	it "should include the date" do
+  		test_data.include? date.to_s
+  	end
+  	it "should include the thesis" do
+  		test_data.include? thesis
+  	end
+end
 
 
+=end
 
 
 

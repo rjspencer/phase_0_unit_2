@@ -1,5 +1,7 @@
 # Ruby Algorithms
-
+# new group
+# jamesmiller78@gmail.com, ismailkalimi@gmail.com, sjl7909@gmail.com, 
+mpyczkowski@gmail.com
 So you've done some preparation on Ruby, and have probably been wondering "Why did we have to do all those exercises before Phase 0 if we weren't even going to start with Ruby?" Well, now is your time to get back to it while using the blog and skills you learned in unit 1. 
 
 This week you will be working on writing command-line programs focusing on algorithms and basic testing. Some challenges will also have tests already developed using RSpec (a tool for testing ruby code). You will learn how to run these tests on your computer and read them to figure out what the errors are. NOTE: You are not expected to write RSpec in Phase 0, just read it. RSpec is designed to be readable. 

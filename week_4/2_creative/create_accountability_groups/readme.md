@@ -15,6 +15,13 @@ In this challenge, you are going to make a method that takes an array of names (
 
 You will also not have any tests for this challenge, so it's your job to create them. Read the document on Writing [Driver Test Code](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/driver_code.md) code with Ruby. You should write tests with expectations that return `true` if the code is working and `false` if it is not.
 
+It should return an array of arrays
+It should return an array with at least ( number of students / 4 ) arrays
+It should return an array with no more than ( number of students / 4 + 1) arrays
+If ( students % 4 = 0 ) then it should return an array with exactly ( students / 4 ) arrays
+The total number of students in all arrays should equal the number of students passed to the function 
+
+
 You will want to consider:
 - Are there built-in methods to do this in Ruby?
 - Will you try to avoid putting the same people together more than once?
