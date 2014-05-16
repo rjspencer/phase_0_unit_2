@@ -15,20 +15,24 @@ return a few paragraphs with passed variables in it
 =end
 
 # 3. Initial Solution
-
+=begin
 def essay_writer(title, subject, date, thesis, pronoun)
-
 	return "#{title} by Ryan J Spencer.\nI have written about a lot of different subjects in my day, but few could be dearer to my heart than #{subject}.  I feel that not enough people know about #{pronoun}, and I don't think I should keep such an awesome secret any longer.  \nI want you to think back to the year #{date} and imagine what it was like to be #{subject}.  #{thesis}.  \n#{pronoun} changed our world and I think we are all better for it"
-
 end
-
+=end
 # 4. Refactored Solution
 
-
-
-
-
-
+def essay_writer(title, subject, date, thesis, pronoun)
+  if pronoun.upcase == "MALE" 
+    him_her = 'him'
+    he_she = 'he'
+  elsif pronoun.upcase == "FEMALE"
+    him_her = 'her'
+    he_she = 'she'
+  end
+    
+	return "#{title} by Ryan J Spencer.\nI have written about a lot of different subjects in my day, but few could be dearer to my heart than #{subject}.  I feel that not enough people know about #{him_her}, and I don't think I should keep such an awesome secret any longer.  \nI want you to think back to the year #{date} and imagine what it was like to be #{subject}.  #{thesis}.  \n#{he_she.capitalize} changed our world and I think we are all better for it"
+end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
@@ -42,8 +46,8 @@ thesis = "His most important contribution to history is that he founded the Toku
 pronoun = "male"
 
 test_data = essay_writer(title, subject, date, thesis, pronoun) 
-puts test_data
-=begin
+#puts test_data
+
 describe "essay_writer" do
    	it "should return a non-empty string" do
       test_data.kind_of?(String) || test_data.length >= 1
@@ -66,10 +70,14 @@ describe "essay_writer" do
 end
 
 
-=end
 
 
 
 # 5. Reflection 
+=begin
+I don't like putting the tests in the same file.  Its too much work to keep moving comments around to test things.  It reminds me of finding missing semicolons.
 
+This one was hard to wrap my head around what you were asking for because it really only needs one line of code, so I though I was missing something.
+
+=end
 
