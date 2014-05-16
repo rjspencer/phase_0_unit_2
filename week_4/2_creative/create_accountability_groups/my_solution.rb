@@ -12,7 +12,9 @@
 
 # 3. Initial Solution
 
+def group_creator (students)
 
+end
 
 
 # 4. Refactored Solution
@@ -25,9 +27,6 @@
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-
-
-
 
 
 
