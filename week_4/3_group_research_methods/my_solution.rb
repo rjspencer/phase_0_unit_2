@@ -22,20 +22,15 @@ end
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
   source.each_with_index do |value, i|
-    if value.kind_of?(Integer) 
-      source[i] += thing_to_modify
-    end  
+    source[i] += thing_to_modify if value.kind_of?(Integer) 
   end
-  source
+
 end
 
 def my_hash_modification_method(source, thing_to_modify)
   source.each_pair do |(key,value)|
-    if value.kind_of?(Integer) 
-      source[key] += thing_to_modify
-    end  
+      source[key] += thing_to_modify if value.kind_of?(Integer)
   end
-  source
 end
 
 # Identify and describe the ruby method you implemented. 
