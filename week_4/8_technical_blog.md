@@ -20,14 +20,36 @@ Select one of the ruby methods below, do some research on it, and think of a sce
 
 #### Topics
 - `Enumerable#map`
+
 - `Enumerable#group_by`
+Converts a group or array into a hash of arrays according to the given block
+
 - `Enumerable#cycle`
+Similiar to a FOR loop, cycle runs a block against an Array forever, or a preset number of times if a number is passed.
+
 
 ### Option 2: Research Questions
 Research one of the following questions/topics. In your blog post, you will want to explain the background and teach others how to implement what you've learned. 
 
 - Arrays vs. Hashes. What are they? What are they good for? How do you know which one to use? (Teach others a strategy for deciding)
 - Looping - Discuss the various ways to loop in Ruby. How can you decide which is best to use? (Teach others a strategy for deciding)
+Top 3 Ruby Developer Goals
+Functionality
+Fast Development
+Readable + Maintainable Code
+
+What is not a major goal?  Speed.
+
+Yes, speed is important.  As programmers, we should keep in mind that certain methods take longer than others.  However, don't sweat it too much.  Execution speed is for the C++ people.  After the program is created, we can look back and see where the bottlenecks appear in our code.  Rather than spending hours upfront on something that might not even matter, lets focus on keeping our code legible.
+
+When it comes to looping, Ruby has a bunch of different ways to tackle the problem, so how do we determine the right way to do it?  <b>Readable + Maintainable Code</b>.  
+
+If you spend too much time testing each method for speed, your goal of <b>Fast Development</b> will suffer.  Write your code, determine if it functions properly, and refactor if it will be hard for another programmer to read.
+
+<h3>For Loops...</h3>
+<p>For loops are the way to go when you need to do something a specific number of times.  Examples include
+
+
 - Ruby vs. JavaScript - Discuss the benefits/drawbacks of each as you've experienced them. Explain to others how to decide which is better to use for what. 
   Also include examples of how to do the same thing in each. 
 
