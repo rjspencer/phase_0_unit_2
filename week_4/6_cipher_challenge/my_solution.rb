@@ -128,3 +128,9 @@ p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw
 
 # Reflection
  
+=begin
+Good pair.  He drove most of the time since he had a chance to look it over before we started.  He taught me a few things, like a regular expression comparison.  I showed him how to fit an 'if' statement on one line.  I thought the way he built the key hash on 3 lines was clean and elegant.  We collaborated using Nitrous.io and it worked fairly well.  There were a few connection hiccups, but it worked.
+
+I feel like ciphers are a fun educational exercise, but I doubt we will ever actually use this, though we will likely use these skills to modify strings, arrays and hashes in other ways.  I imagine ciphers are mostly written in low level or assembly language.  True ciphers are very advanced mathmatic equations, and ruby would take too long.
+
+
