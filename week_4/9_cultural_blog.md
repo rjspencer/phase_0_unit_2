@@ -37,5 +37,13 @@ That person I mentioned earlier?  She was an amazing liar, and I should hate her
 
 ## Release 2: Make it Live!
 Link to your blog on the index of your site and commit and push your changes to GitHub. 
+=======
+## Release 2: Publish
+Link to your blog on the index of your site and push your changes. 
 
-Share your blog on the google+ community under "Blog Posts!" Read others blogs. What did you like about them? Comment on their post!
+
+Make sure the index of your site is maintained, nice, and professional. This is your face in the online community, so make it nice!
+
+## Release 3: Share!
+
+Share your blog on the google+ community under "Blog Posts!" Read others and see if you agree or disagree. Start a discussion on this topic.  Consider sharing your blog post on Reddit as well.
