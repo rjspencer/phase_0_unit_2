@@ -1,7 +1,7 @@
 # U2.W5: Die Class 2: Arbitrary Symbols
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
 # 2. Pseudocode
 
@@ -19,6 +19,9 @@ roll() - Pick a random string
 
 class Die
   def initialize(labels)
+  	unless labels.size != 0 
+		raise ArgumentError.new("Passed array must not be empty")
+	end
   	@sides = labels
   end
 
@@ -36,21 +39,27 @@ end
 # 4. Refactored Solution
 
 
-
+#nothing to do
 
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 
-
+=begin
 die = Die.new(['A', 'B', 'C', 'D', 'E', 'F'])
-die.sides # still returns the number of sides, in this case 6
-die.roll # returns one of ['A', 'B', 'C', 'D', 'E', 'F'], randomly
+puts die.sides # still returns the number of sides, in this case 6
+puts die.roll # returns one of ['A', 'B', 'C', 'D', 'E', 'F'], randomly
 
 
-
-
+boggle = Die.new(('A'..'Z').to_a)
+puts boggle.sides
+10.times do 
+	puts boggle.roll
+end
+=end
 
 
 # 5. Reflection 
+
+# Dear stackoverflow.com, thanks for the .size  
