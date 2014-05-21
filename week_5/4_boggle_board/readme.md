@@ -37,7 +37,7 @@ In boggle, you can spell out words by collecting letters that are immediately ne
   end
 
   puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code"  
-  puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> creates what california slang word?
+  puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> creates what california slang word? RAD
   ```
 
 #### Part 2: Write a method that takes a row number and returns all the elements in the row.  
@@ -45,6 +45,8 @@ In boggle, you can spell out words by collecting letters that are immediately ne
 ```ruby
 def get_row(row)
     # your code here
+    boggle_board[row] # just what is requested
+    boggle_board[row].each.join("") # as a word
 end
 
 get_row(1) #=>  ["i", "o", "d", "t"]
@@ -56,6 +58,7 @@ get_row(1) #=>  ["i", "o", "d", "t"]
 ```ruby
 def get_col(col)
     # your code here
+    boggle_board.each(col)
 end
 
 get_col(1)  #=>  ["r", "o", "c", "a"]
