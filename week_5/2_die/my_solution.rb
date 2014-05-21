@@ -21,7 +21,7 @@ class Die
   def initialize(labels)
   	unless labels.length != 0  # .size is another option
 		  raise ArgumentError.new("Passed array must not be empty")
-	end
+    end
   	@sides = labels
   end
 
