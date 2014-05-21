@@ -1,10 +1,11 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself ].
 
 # EXPLANATION OF require_relative
 #
-#
+# Gets the STATE_DATA hash from state_data.rb
+# Allows updating of that data without access to processing code
 require_relative 'state_data'
 
 class VirusPredictor
@@ -18,12 +19,16 @@ class VirusPredictor
   end
 
   def virus_effects  #HINT: What is the SCOPE of instance variables?
+    #These variables are already available to all functions in this class and do NOT need to be sent
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+  # private methods are only accessible by other methods in the same class
+  # Prevents issues caused by name overlaps in large programs
 
+  # predicted_death takes density to determine death rate and multiplies population by death rate to determine the number of deaths (rounded down)
   def predicted_deaths(population_density, population, state)
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,6 +46,7 @@ class VirusPredictor
 
   end
 
+  # speed_of_spread uses the population density to determine the rate the outbreak will spread
   def speed_of_spread(population_density, state) #in months
     speed = 0.0
 
@@ -66,8 +72,12 @@ end
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
-
-
+STATE_DATA.each do |state, state_values|
+  #puts "#{state} population density: #{state_values[:population_density]}"
+  prediction = VirusPredictor.new(state, state_values[:population_density], state_values[:population], state_values[:region], state_values[:regional_spread]) 
+  prediction.virus_effects
+end
+=begin
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population], STATE_DATA["Alabama"][:region], STATE_DATA["Alabama"][:regional_spread]) 
 alabama.virus_effects
 
@@ -79,3 +89,5 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
 alaska.virus_effects
+
+=end
