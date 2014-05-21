@@ -19,8 +19,8 @@ roll() - Pick a random string
 
 class Die
   def initialize(labels)
-  	unless labels.size != 0 
-		raise ArgumentError.new("Passed array must not be empty")
+  	unless labels.length != 0  # .size is another option
+		  raise ArgumentError.new("Passed array must not be empty")
 	end
   	@sides = labels
   end

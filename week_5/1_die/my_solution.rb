@@ -45,13 +45,13 @@ end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-
+=begin
 nine = Die.new(9)
 puts "Sides test: #{nine.sides == 9}"
 puts "Roll test: #{nine.roll >= 1 && nine.roll <= 9}"
 negative = Die.new(-1) # Returns error
 
-
+=end
 # 5. Reflection 
 
 #This one was pretty easy.
