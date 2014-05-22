@@ -26,7 +26,6 @@ describe CreditCard do
     
     it 'returns true for a valid card' do
       card = CreditCard.new(4408041234567893)
-      
       card.check_card.should eq true
     end
     
