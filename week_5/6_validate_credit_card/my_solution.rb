@@ -27,6 +27,7 @@ if no remainder then valid
 
 # Don't forget to check on initialization for a card length
 # of exactly 16 digits
+=begin
 class CreditCard
 	def initialize(card_number)
 		unless card_number >= 1000000000000000 && card_number <= 9999999999999999  
@@ -58,12 +59,35 @@ class CreditCard
 		return (luhn_arr.reduce(:+)) % 10 === 0
 	end
 end
-
+=end
 
 
 # 4. Refactored Solution
 
+class CreditCard
+	def initialize(card_number)
+		unless card_number >= 1000000000000000 && card_number <= 9999999999999999  
+			raise ArgumentError.new("Credit card number must be 16 digits")
+		end
+		@card_number = card_number
+	end
 
+	def check_card()
+		luhn_arr = []
+		count = 0
+		@card_number.to_s.split("").each do |x| 
+			count += 1
+			if count % 2 === 1
+				y = x.to_i * 2
+				z = y.to_s.split("")
+				luhn_arr << z[0].to_i + z[1].to_i
+			else
+				luhn_arr << x.to_i
+			end
+		end
+		return (luhn_arr.reduce(:+)) % 10 === 0
+	end
+end
 
 
 
@@ -79,3 +103,7 @@ puts "Invalid Card: #{my_card_invalid.check_card }"
 #my_card_too_long = CreditCard.new(123456789123456789)
 
 # 5. Reflection 
+
+# My refactor, and all my code really, is pretty specific to the situation.  There isn't much to reuse here, though I did jump back to last week's first math assignment for the quick sum code.  I'm getting more comfortable with chaining methods.  I think the trick is doing it in the form that is readable.
+
+# Write the code in any way that works first.  Get the tests to pass.  Then refactor and check again.  It really made sense on this one.  Almost cut the code in half in a matter of 5 minutes.
