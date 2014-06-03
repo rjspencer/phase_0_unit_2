@@ -122,5 +122,11 @@ p bakery_num(41, "cake") == "You need to make 6 cake(s), and 5 cookie(s)."  #WHA
 
 #  Reflection 
 
+# I changed the driver code, even though I was not supposed to.  I felt it wasn't elegant enough.
+
+# fixing ugly code can be confusing.  I think we got caught up too much in how the old code was working instead of what it was doing.  In the future, I will focus on the entire code sections instead of each individual loop.  
+
+# I think the finished product is much easier to read.
+
 
 
