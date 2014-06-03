@@ -25,22 +25,28 @@ class Drawer
 	end 
 
 	def add_item(item)
-		@contents << item
+		@item = item
+		@contents << @item
 	end
 
 	def remove_item(item = @contents.pop) #what is `#pop` doing? Defaults to removing the last element of the array
+		@item = item
 		@contents.delete(item)
 		return item
 	end
 
 	def dump  # what should this method return? 
-		@contents.each { |i| i.remove_item }
+		@contents = []
 		puts "Your drawer is empty."
 	end
 
 	def view_contents
-		puts "The drawer contains:"
-		@contents.each {|silverware| puts "- " + silverware.type }
+		if @contents.empty?
+			puts "The drawer is empty"
+		else
+			puts "The drawer contains:"
+			@contents.each {|silverware| puts "- " + silverware.type }
+		end
 	end
 end
 
@@ -66,9 +72,8 @@ class Silverware
 end
 
 knife1 = Silverware.new("knife")
-puts knife1
 silverware_drawer = Drawer.new
-puts silverware_drawer
+
 silverware_drawer.add_item(knife1)
 silverware_drawer.add_item(Silverware.new("spoon"))
 silverware_drawer.add_item(Silverware.new("fork")) 
@@ -90,10 +95,11 @@ silverware_drawer.view_contents
 silverware_drawer.dump
 silverware_drawer.view_contents #What should this return? nothing
 
-p fork
-fork = silverware_drawer.remove_item(fork) #add some puts statements to help you trace through the code...
-p fork
+fork = Silverware.new("fork")
 fork.eat
+fork = silverware_drawer.remove_item(fork) #add some puts statements to help you trace through the code...
+
+# "fork".eat
 
 #BONUS SECTION
 # puts fork.clean
