@@ -1,6 +1,6 @@
 # U2.W6: Testing Assert Statements
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 
 # 2. Review the simple assert statement
@@ -15,6 +15,9 @@ assert { name == "billybob" }
 
 # 2. Pseudocode what happens when the code above runs
 
+Create name
+check if name is "bettysue"
+check if name is "billybob"
 
 
 # 3. Copy your selected challenge here
