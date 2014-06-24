@@ -1,5 +1,5 @@
 # U2.W6: PezDispenser Class from User Stories
-
+# COMPLETE
 
 # I worked on this challenge [by myself, with: ].
 
@@ -15,14 +15,42 @@
 
 
 # 2. Pseudocode
-
-
+=begin
+Create a Pez dispenser 
+add pieces by flavor
+count pez pieces left
+take a piece for eating
+show the pez piece flavors in order
+=end
 
 # 3. Initial Solution
 
+def assert
+  raise "Assertion failed!" unless yield
+end
+
 class PezDispenser
  
-# your code here!
+	def initialize(flavors)  # expects array
+		@flavors = Array.new()
+		@flavors = flavors
+	end
+
+	def add_pez(flavor) # expects string
+		@flavors.push(flavor)
+	end
+
+	def get_pez
+		@flavors.pop
+	end
+
+	def pez_count
+		@flavors.length
+	end
+
+	def see_all_pez
+		@flavors
+	end
  
 end
  
@@ -39,17 +67,26 @@ end
 
 flavors = %w(cherry chocolate cola grape lemon orange peppermint raspberry strawberry).shuffle
 super_mario = PezDispenser.new(flavors)
-puts "A new pez dispenser has been created. You have #{super_mario.pez_count} pez!"  
+
+puts "A new pez dispenser has been created. You have #{super_mario.pez_count} pez!" unless assert{super_mario.pez_count == 9} 
 puts "Here's a look inside the dispenser:"  
 puts super_mario.see_all_pez 
 puts "Adding a purple pez."
 super_mario.add_pez("purple")   # mmmmm, purple flavor
-puts "Now you have #{super_mario.pez_count} pez!"
+puts super_mario.see_all_pez 
+puts "Now you have #{super_mario.pez_count} pez!" unless assert{super_mario.pez_count == 10} 
 puts "Oh, you want one do you?"
-puts "The pez flavor you got is: #{super_mario.get_pez}"
-puts "Now you have #{super_mario.pez_count} pez!"
+puts "The pez flavor you got is: #{super_mario.get_pez}" # unless assert{super_mario.get_pez == "purple"} .... assert runs first destroying the right answer
+puts "Now you have #{super_mario.pez_count} pez!" unless assert{super_mario.pez_count == 9} 
 
 
 
 
 # 5. Reflection 
+
+=begin
+
+%w is an interesting shorthand for writing '', around each value in a word array.  
+
+The assert statement runs first in an UNLESS statement, so if the function is destructive, it may skew the TESTS
+
