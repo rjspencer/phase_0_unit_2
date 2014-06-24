@@ -1,11 +1,8 @@
 # U2.W6: Testing Assert Statements
-<<<<<<< HEAD
+
 #COMPLETE
-=======
 
->>>>>>> 45eb922d10162148d779e6cf39e281210a40f687
 # I worked on this challenge by myself.
-
 
 # 2. Review the simple assert statement
 =begin
@@ -21,17 +18,13 @@ assert { name == "billybob" }
 =begin
 Check if a section of code works, declare "Assertion failed!" if it does not.
 
-<<<<<<< HEAD
-13 ''
-14 'Assertion failed'
 =end
-=======
-Create name
-check if name is "bettysue"
-check if name is "billybob"
+
+#Create name
+#check if name is "bettysue"
+#check if name is "billybob"
 
 
->>>>>>> 45eb922d10162148d779e6cf39e281210a40f687
 # 3. Copy your selected challenge here
 
 # U2.W5: The Bakery Challenge (GPS 2.1)

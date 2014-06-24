@@ -1,18 +1,18 @@
 # U2.W6: Create a BoggleBoard Class
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 
 # 2. Pseudocode
 
-BoggleBoard
-accepts array of letters
-creates words from coordinates
-returns letters 
-	by position
-	by row
-	by column
+#BoggleBoard
+#accepts array of letters
+#creates words from coordinates
+#returns letters 
+#	by position
+#	by row
+#	by column
 
 # 3. Initial Solution
 class BoggleBoard

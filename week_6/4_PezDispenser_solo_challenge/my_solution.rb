@@ -1,7 +1,7 @@
 # U2.W6: PezDispenser Class from User Stories
 # COMPLETE
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 # 1. Review the following user stories:
 # - As a pez user, I'd like to be able to "create" a new pez dispenser with a group of flavors that 
@@ -90,3 +90,4 @@ puts "Now you have #{super_mario.pez_count} pez!" unless assert{super_mario.pez_
 
 The assert statement runs first in an UNLESS statement, so if the function is destructive, it may skew the TESTS
 
+=end

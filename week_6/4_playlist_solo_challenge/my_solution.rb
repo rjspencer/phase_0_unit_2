@@ -81,7 +81,7 @@ end
 class Playlist
 	def initialize ( *songs ) # expects multiple
 		@songs = []
-		add ( *songs )
+    songs.map { |song| add(song) }
 	end
 
 	def add ( *songs ) # expects multiple
@@ -127,8 +127,8 @@ p my_playlist.num_of_tracks == 5
 going_under.play
 my_playlist.remove(angels)
 p my_playlist.includes?(lying_from_you) == true
-my_playlist.play_all
 my_playlist.display
+my_playlist.play_all
 
 
 
@@ -138,7 +138,7 @@ my_playlist.display
 
 =begin
 
-I don't have a lot of OO experience, but I have worked with databases.  The way we are interacting from class to class reminds me of how batabase tables interact.  I'm interested to see if we stick with classes as we get more advanced, move completely to databases (slower?), but I am guessing it is somewhere inbetween
+I don't have a lot of OO experience, but I have worked with databases.  The way we are interacting from class to class reminds me of how batabase tables interact.  I'm interested to see if we stick with classes as we get more advanced, move completely to databases (slower?), but I am guessing it is somewhere inbetween.
 
 I added a method call inside an initialize method.  It worked! DRY!
 =end
